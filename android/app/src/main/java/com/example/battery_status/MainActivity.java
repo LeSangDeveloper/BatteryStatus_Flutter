@@ -9,11 +9,12 @@ import androidx.annotation.NonNull;
 
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 
-public class MainActivity extends FlutterActivity {
+public class MainActivity extends FlutterActivity implements FlutterPlugin {
     private static final String CHANNEL = "samples.flutter.dev/battery";
     private MethodChannel methodChannel;
 
@@ -52,5 +53,15 @@ public class MainActivity extends FlutterActivity {
             batteryLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) * 100 / intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         }
         return batteryLevel;
+    }
+
+    @Override
+    public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
+
+    }
+
+    @Override
+    public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+
     }
 }

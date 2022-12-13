@@ -3,6 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  battery_status_plugin
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

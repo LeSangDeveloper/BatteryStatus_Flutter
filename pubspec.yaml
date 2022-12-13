@@ -32,7 +32,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -40,6 +39,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  battery_status_plugin:
+    git:
+      url: https://github.com/LeSangDeveloper/battery_status_plugin
+      ref: 924356d
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
